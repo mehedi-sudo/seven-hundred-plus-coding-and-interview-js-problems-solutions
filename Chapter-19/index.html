@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Something</h1>
+
+    <script>
+
+
+        // fetch
+        // Practice: 
+        // 4.
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())  
+        .then(data => console.log(data))    
+        .catch(error => console.error('Error:', error));
+
+
+
+        // 5.
+        fetch('https://jsonplaceholder.typicode.com/users/1')
+        .then(response => response.json())  
+        .then(data => console.log(data))    
+        .catch(error => console.error('Error:', error));
+
+
+
+        
+
+        // Async and Await
+
+        // Practice: 
+
+
+        // 2.
+
+        async function featchUser() {
+        try {
+            const resUser = await fetch('https://jsonplaceholder.typicode.com/users/2')
+            const data = await resUser.json()
+            console.log(data);
+            
+        } catch (e) {
+            console.log(e.message)
+        }
+        }
+        // featchUser()
+
+
+
+    </script>
+</body>
+</html>
